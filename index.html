@@ -1420,12 +1420,12 @@
   .text-input:focus{border-color:#64748B;box-shadow:0 0 0 2px #fff, 0 0 0 4px #64748B;}
   .url-row{display:flex;gap:8px;}
   .url-fixed{
-    flex:1;height:40px;display:flex;align-items:center;padding:0 12px;
+    flex:0 1 auto;min-width:0;height:40px;display:flex;align-items:center;padding:0 12px;
     background:#E3E2DF;border:1px solid #EDECE9;border-radius:12px;
     font-size:14px;color:#333;font-family:'Lato',sans-serif;
     overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
   }
-  .url-slot{width:130px;height:40px;}
+  .url-slot{flex:1;min-width:0;height:40px;}
 
   .two-col{display:flex;gap:16px;}
   .two-col > div{flex:1;}
