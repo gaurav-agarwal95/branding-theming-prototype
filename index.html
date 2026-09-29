@@ -260,6 +260,7 @@
 
   .page{
     --primary:#0E4E69;
+    --secondary:#E3E2DF;
     --accent:#298317;
     --accent-swatch:#68E353;
     --nav-dark:#032D42;
@@ -1025,6 +1026,7 @@
 
   .page{
     --primary:#0E4E69;
+    --secondary:#E3E2DF;
     --accent:#298317;
     --accent-swatch:#68E353;
     --nav-dark:#032D42;
@@ -2324,6 +2326,17 @@
                 </div>
 
                 <div class="color-field">
+                  <label class="field-label"><span class="req">*</span>Secondary color</label>
+                  <div class="swatch-row">
+                    <div class="swatch" id="v3-secondarySwatch" style="background:var(--secondary);">
+                      <input type="color" id="v3-secondaryPicker" value="#E3E2DF">
+                    </div>
+                    <input type="text" class="hex-input" id="v3-secondaryHex" value="#E3E2DF">
+                  </div>
+                  <p class="field-hint">A complementary brand color used for supporting UI elements and secondary actions.</p>
+                </div>
+
+                <div class="color-field">
                   <label class="field-label"><span class="req">*</span>Accent color</label>
                   <div class="swatch-row">
                     <div class="swatch" id="v3-accentSwatch" style="background:var(--accent-swatch);">
@@ -3017,6 +3030,17 @@
                 </div>
 
                 <div class="color-field">
+                  <label class="field-label"><span class="req">*</span>Secondary color</label>
+                  <div class="swatch-row">
+                    <div class="swatch" id="nt-secondarySwatch" style="background:var(--secondary);">
+                      <input type="color" id="nt-secondaryPicker" value="#E3E2DF">
+                    </div>
+                    <input type="text" class="hex-input" id="nt-secondaryHex" value="#E3E2DF">
+                  </div>
+                  <p class="field-hint">A complementary brand color used for supporting UI elements and secondary actions.</p>
+                </div>
+
+                <div class="color-field">
                   <label class="field-label"><span class="req">*</span>Accent color</label>
                   <div class="swatch-row">
                     <div class="swatch" id="nt-accentSwatch" style="background:var(--accent-swatch);">
@@ -3457,12 +3481,14 @@
     hex.addEventListener('change', ()=> apply(hex.value.startsWith('#') ? hex.value : '#'+hex.value));
   }
   bindColor('v3-primaryPicker','v3-primaryHex','--primary');
+  bindColor('v3-secondaryPicker','v3-secondaryHex','--secondary');
   bindColor('v3-accentPicker','v3-accentHex','--accent', (val)=>{
     v3PageRoot.style.setProperty('--accent-swatch', val);
   });
 
   // keep swatch backgrounds synced (they read var already via inline style referencing var(--primary)/var(--accent-swatch))
   document.getElementById('v3-primarySwatch').style.background = 'var(--primary)';
+  document.getElementById('v3-secondarySwatch').style.background = 'var(--secondary)';
   document.getElementById('v3-accentSwatch').style.background = 'var(--accent-swatch)';
 
   // ---------- Neutral palette dropdown ----------
@@ -3729,6 +3755,12 @@
       document.getElementById('nt-primarySwatch').style.background = t.primary;
       ntRoot.style.setProperty('--primary', t.primary);
 
+      const tSecondary = t.secondary || '#E3E2DF';
+      document.getElementById('nt-secondaryPicker').value = tSecondary;
+      document.getElementById('nt-secondaryHex').value = tSecondary;
+      document.getElementById('nt-secondarySwatch').style.background = tSecondary;
+      ntRoot.style.setProperty('--secondary', tSecondary);
+
       document.getElementById('nt-accentPicker').value = t.accent;
       document.getElementById('nt-accentHex').value = t.accent;
       document.getElementById('nt-accentSwatch').style.background = t.accent;
@@ -3820,10 +3852,12 @@
     hex.addEventListener('change', ()=> apply(hex.value.startsWith('#') ? hex.value : '#'+hex.value));
   }
   ntBindColor('nt-primaryPicker','nt-primaryHex','--primary');
+  ntBindColor('nt-secondaryPicker','nt-secondaryHex','--secondary');
   ntBindColor('nt-accentPicker','nt-accentHex','--accent', (val)=>{
     ntRoot.style.setProperty('--accent-swatch', val);
   });
   document.getElementById('nt-primarySwatch').style.background = 'var(--primary)';
+  document.getElementById('nt-secondarySwatch').style.background = 'var(--secondary)';
   document.getElementById('nt-accentSwatch').style.background = 'var(--accent-swatch)';
 
   // ---------- New theme page: neutral palette dropdown (scoped to this page) ----------
