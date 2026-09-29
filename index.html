@@ -1922,7 +1922,7 @@
   .theme-meta{display:flex;flex-direction:column;gap:2px;}
   .theme-meta-label{font-family:'Inter',sans-serif;font-size:12.5px;color:var(--sub);}
   .theme-meta-value{font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);}
-  .theme-footer-row{display:flex;align-items:flex-end;gap:36px;padding-top:6px;border-top:1px solid #EEEEED;margin-top:2px;}
+  .theme-footer-row{display:flex;align-items:flex-end;gap:52px;padding-top:6px;border-top:1px solid #EEEEED;margin-top:2px;}
   .theme-footer-item{display:flex;flex-direction:column;gap:8px;}
   .theme-footer-label{font-family:'Inter',sans-serif;font-size:12px;color:var(--sub);}
   .theme-colors-swatch{display:flex;gap:6px;}
@@ -2663,6 +2663,7 @@
                   <span class="theme-footer-label">Colors</span>
                   <div class="theme-colors-swatch">
                     <span style="background:#0E4E69;"></span>
+                    <span style="background:#E3E2DF;"></span>
                     <span style="background:#68E353;"></span>
                   </div>
                 </div><div class="theme-footer-item">
@@ -2697,6 +2698,7 @@
                   <span class="theme-footer-label">Colors</span>
                   <div class="theme-colors-swatch">
                     <span style="background:#5B7FE0;"></span>
+                    <span style="background:#C9A6A0;"></span>
                     <span style="background:#7A4FE0;"></span>
                   </div>
                 </div><div class="theme-footer-item">
@@ -2731,6 +2733,7 @@
                   <span class="theme-footer-label">Colors</span>
                   <div class="theme-colors-swatch">
                     <span style="background:#3D1A66;"></span>
+                    <span style="background:#8FCB8F;"></span>
                     <span style="background:#1F6B2E;"></span>
                   </div>
                 </div><div class="theme-footer-item">
@@ -2762,6 +2765,7 @@
                 <div class="theme-col theme-col-colors">
                   <div class="theme-colors-swatch">
                     <span style="background:#0E4E69;"></span>
+                    <span style="background:#E3E2DF;"></span>
                     <span style="background:#68E353;"></span>
                   </div>
                 </div>
@@ -2785,6 +2789,7 @@
                 <div class="theme-col theme-col-colors">
                   <div class="theme-colors-swatch">
                     <span style="background:#5B7FE0;"></span>
+                    <span style="background:#C9A6A0;"></span>
                     <span style="background:#7A4FE0;"></span>
                   </div>
                 </div>
@@ -2808,6 +2813,7 @@
                 <div class="theme-col theme-col-colors">
                   <div class="theme-colors-swatch">
                     <span style="background:#3D1A66;"></span>
+                    <span style="background:#8FCB8F;"></span>
                     <span style="background:#1F6B2E;"></span>
                   </div>
                 </div>
@@ -3656,9 +3662,9 @@
   const ntBreadcrumbCurrent = ntRoot.querySelector('.breadcrumb span');
 
   const themesData = [
-    { name:'Australia - sales reps', primary:'#0E4E69', accent:'#68E353', active:true, order:100, avail:['Sales organization','Australia team'], notavail:['India team','US team'] },
-    { name:'IT Department admins', primary:'#5B7FE0', accent:'#7A4FE0', active:true, order:200, avail:['IT department','Admins'], notavail:['HR admins'] },
-    { name:'Executive leadership', primary:'#3D1A66', accent:'#1F6B2E', active:false, order:300, avail:['Leadership'], notavail:['Managers'] }
+    { name:'Australia - sales reps', primary:'#0E4E69', secondary:'#E3E2DF', accent:'#68E353', active:true, order:100, avail:['Sales organization','Australia team'], notavail:['India team','US team'] },
+    { name:'IT Department admins', primary:'#5B7FE0', secondary:'#C9A6A0', accent:'#7A4FE0', active:true, order:200, avail:['IT department','Admins'], notavail:['HR admins'] },
+    { name:'Executive leadership', primary:'#3D1A66', secondary:'#8FCB8F', accent:'#1F6B2E', active:false, order:300, avail:['Leadership'], notavail:['Managers'] }
   ];
   const allTeams = ['Sales organization','Australia team','India team','US team','IT department','Admins','HR admins','Leadership','Managers'];
 
